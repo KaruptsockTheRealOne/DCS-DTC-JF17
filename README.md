@@ -3,16 +3,15 @@
 https://github.com/the-paid-actor/dcs-dtc
 
 This is a mod for DCS that works as a DTC (Data Cartridge) for the F-16.
+Large sections re-written for the JF-17 and some functions removed to be more compatible.
 
 Features:
 
-- Allows uploading to the F-16 cockpit:
+- Allows uploading to the JF-17 cockpit:
   - Waypoints
-  - Countermeasure settings
-  - Radios
-  - MFD pages settings for the major modes (NAV, AA, AG, DGFT, MSL)
-- Enables you to share and receive settings from other people using this mod, either by file or clipboard
-- Allows capturing a waypoint coordinate using the F10 view in DCS, or a "markpoint" by flying over a point in the map.
+  - Enables you to share and receive settings from other people using this mod, either by file or clipboard
+  - Allows capturing a waypoint coordinate using the F10 view in DCS, or a "markpoint" by flying over a point in the map.
+  - Elevation data removed due to the way the Jeff accepts elevation data.
 
 ## Requirements
 
