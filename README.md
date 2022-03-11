@@ -1,6 +1,6 @@
 # DCS DTC
 
-This is a extension of the work of the DCS DTC MOD for the DTC (Data Cartridge) in the F-16.
+This is an extension of the work of the DCS DTC MOD for the DTC (Data Cartridge) in the F-16.
 https://github.com/the-paid-actor/dcs-dtc
 
 Large sections re-written for the JF-17 and some functions removed to be more compatible.
