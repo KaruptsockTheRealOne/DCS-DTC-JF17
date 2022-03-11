@@ -1,9 +1,12 @@
 # DCS DTC
 
+This is a extension of the work of the DCS DTC MOD for the DTC (Data Cartridge) in the F-16.
 https://github.com/the-paid-actor/dcs-dtc
 
-This is a mod for DCS that works as a DTC (Data Cartridge) for the F-16.
 Large sections re-written for the JF-17 and some functions removed to be more compatible.
+This allows you to capture Lat/Long on the F10 and via lua commands use the UFC and punch in all the saved waypoints
+the Default is DST 36 - 39 as this the Jf-17's Pre-Planned points for Smart Weapon Deployments.
+But you can just change the waypoint numbers in the upload section to any numbers between 01-49
 
 Features:
 
