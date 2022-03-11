@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="DTC.exe" version="1.0.0.1" publicKeyToken="d51f6a629defe255" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Resources\Iconleak-Atrous-Disk.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="DTC" version="3.2.0.0" publicKeyToken="618D5E780086C28E" language="neutral" processorArchitecture="msil" />
+    <commandLine file="DTC.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DTC.exe" size="2261936">
+      <assemblyIdentity name="DTC" version="3.2.0.0" publicKeyToken="618D5E780086C28E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>BKLuGjE1B8ni4LceFIWAn2YKUWcD09nyG780jm2hAIQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="701992">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tiSUnfiw46YVP9+3MKfG9JkLZZLuDZIuF4hDPSdmEPM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="DTC.exe.config" size="173">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>03uuocIIhrK1RUnzbK227XK8oiXxVzS+aTuGs0f5MQU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Iconleak-Atrous-Disk.ico" size="432254">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WHyP3O7phrUHZiTUmuCZ8ck/FfnUUwuzGF39rtMxo2w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Structure.txt" size="599">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wKr0QEHxIhBa3yza+eGmDewvyWv1ND71xBYDA2ojpaU=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=GAMEPC2021\KS" issuerKeyHash="1d65b1f49512ef1608e8fa6f7c1573bd2381a170" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>9rRYFpY0dy4dVYkh2dMcDQqBMHBbBg9e+Fhb6t55quU=</DigestValue></Reference></SignedInfo><SignatureValue>vwIhYW1bBsaNqiMcaimU6sXdO0178dg9M61zSJ6Hsb4Frrfo/51trefdGMvUkrtO0BLpXbqlIyIzTJzoUT/84Q58QE/1qyPS1dVA2QFjwXQrDGkFv734c7D5X7PVWiomDndauWnjM5CKM6AxVf8pMMJppNdA50EDaSfkCbglqYc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wvUfDWgX9Rz6iAsdkffiSoaKEG675LJugyOVDIV2NX8Xhh0z0GKioqHBgQjgBSAfDooRzxq2wGL/VBoqO3QAkolMgXN942sTNc8iF4R5lrQeRIqGO2X+o1CZ5RLs6Dqe+pQ0mqldhII1cxrvVvF54Ldu8tRhLzRvfcjbWtri5VE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e5aa79deea5b58f85e0f065b7030810a0d1cd3d92189551d2e7734961658b4f6" Description="" Url=""><as:assemblyIdentity name="DTC.exe" version="1.0.0.1" publicKeyToken="d51f6a629defe255" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=GAMEPC2021\KS</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>6TOfOqXOjrvsC39Qik7hG7gC1tDxFj1UanV63fGgES8=</DigestValue></Reference></SignedInfo><SignatureValue>BYNKaiz5FHfHuW/WMue18Uyr7Xdn7Qa4e+RxUP3WKDZvPQRxYeSty9CpdvFsYdfNe0wXK/xAw5l8Ys5k4N1SO25HVM3pEIyR/J6QP1mDvlAppnV/TgOb32sqm5Gx3SHVcavCMzg5MOD8RaydmRYfsgUgxYMIOP5emHYDnO8q5So=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wvUfDWgX9Rz6iAsdkffiSoaKEG675LJugyOVDIV2NX8Xhh0z0GKioqHBgQjgBSAfDooRzxq2wGL/VBoqO3QAkolMgXN942sTNc8iF4R5lrQeRIqGO2X+o1CZ5RLs6Dqe+pQ0mqldhII1cxrvVvF54Ldu8tRhLzRvfcjbWtri5VE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQNe/KfpLISJdGgiWEk/gHhDANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDHhoARwBBAE0ARQBQAEMAMgAwADIAMQBcAEsAUzAeFw0yMjAyMDcxMDAxNDVaFw0yMzAyMDcxNjAxNDVaMCUxIzAhBgNVBAMeGgBHAEEATQBFAFAAQwAyADAAMgAxAFwASwBTMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDC9R8NaBf1HPqICx2R9+JKhooQbrvksm6DI5UMhXY1fxeGHTPQYqKiocGBCOAFIB8OihHPGrbAYv9UGio7dACSiUyBc33jaxM1zyIXhHmWtB5EioY7Zf6jUJnlEuzoOp76lDSaqV2EgjVzGu9W8Xngt27y1GEvNG99yNta2uLlUQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAAUpGL9XHfgKB/nuTfiV05oJZg/korY3f/vLOjvc8JgcMg+K7smCZMxjnKTIRfrFg3glEGsLyMPhM3MqGZ01ggKR7v401y8lRxLUBvi+37Nif5p2pavupHtOFSgoJWqe5efgDu9Zq/ls0X91v73zTWsRjg0yFc2ZBHGqXnG0S02n</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
