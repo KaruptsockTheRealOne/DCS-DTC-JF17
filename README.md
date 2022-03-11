@@ -5,7 +5,7 @@ https://github.com/the-paid-actor/dcs-dtc
 
 Large sections re-written for the JF-17 and some functions removed to be more compatible.
  
-This allows you to capture Lat/Long on the F10 and via lua commands use the UFC and punch in all the saved waypoints.
+This allows you to capture Lat/Long on the F10 and via lua commands use the UFC to punch in all the saved waypoints.
  
 The Default is DST 36 - 39 as this the Jf-17's Pre-Planned points for Smart Weapon Deployments.
 
