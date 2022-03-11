@@ -1,5 +1,7 @@
 # DCS DTC
 
+You will need to complie it in Visual Studio 2022 Community.
+
 This is an extension of the work of the DCS DTC MOD for the DTC (Data Cartridge) in the F-16.
 https://github.com/the-paid-actor/dcs-dtc
 
