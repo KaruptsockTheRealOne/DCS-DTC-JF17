@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9531AFEB-A6D9-4BA9-A7CE-C3EF9CABF21A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DTC</RootNamespace>
+    <AssemblyName>DTC</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>C:\Users\KS\Desktop\DTCJEFF\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Iconleak-Atrous-Disk.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>dtc.key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>603F4E74EA53710927AA30FF4394000B8D097DD9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DTC_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\DCS\Emitters.cs" />
+    <Compile Include="Models\JF17\CMS\CMSystem.cs" />
+    <Compile Include="Models\JF17\CMS\Program.cs" />
+    <Compile Include="Models\JF17\JF17Commands.cs" />
+    <Compile Include="Models\JF17\JF17Configuration.cs" />
+    <Compile Include="Models\JF17\JF17Upload.cs" />
+    <Compile Include="Models\JF17\HARMHTS\HARMSystem.cs" />
+    <Compile Include="Models\JF17\HARMHTS\HTSSystem.cs" />
+    <Compile Include="Models\JF17\MFD\MFDConfiguration.cs" />
+    <Compile Include="Models\JF17\MFD\MFDSystem.cs" />
+    <Compile Include="Models\JF17\MFD\Mode.cs" />
+    <Compile Include="Models\JF17\MFD\ModeConfiguration.cs" />
+    <Compile Include="Models\JF17\MFD\Page.cs" />
+    <Compile Include="Models\JF17\Misc\MiscSystem.cs" />
+    <Compile Include="Models\JF17\Radios\Radio.cs" />
+    <Compile Include="Models\JF17\Radios\RadioChannel.cs" />
+    <Compile Include="Models\JF17\Radios\RadioSystem.cs" />
+    <Compile Include="Models\JF17\Radios\RadioType.cs" />
+    <Compile Include="Models\JF17\Upload\CMSBuilder.cs" />
+    <Compile Include="Models\JF17\Upload\HARMBuilder.cs" />
+    <Compile Include="Models\JF17\Upload\HTSBuilder.cs" />
+    <Compile Include="Models\JF17\Upload\MFDBuilder.cs" />
+    <Compile Include="Models\JF17\Upload\MiscBuilder.cs" />
+    <Compile Include="Models\JF17\Upload\RadioBuilder.cs" />
+    <Compile Include="Models\JF17\Upload\WaypointBuilder.cs" />
+    <Compile Include="Models\JF17\Waypoints\Waypoint.cs" />
+    <Compile Include="Models\JF17\Waypoints\WaypointSystem.cs" />
+    <Compile Include="Models\F16\HARMHTS\HARMSystem.cs" />
+    <Compile Include="Models\F16\HARMHTS\HTSSystem.cs" />
+    <Compile Include="Models\DCS\IAircraftDeviceManager.cs" />
+    <Compile Include="Models\F16\Misc\MiscSystem.cs" />
+    <Compile Include="Models\DCS\BaseBuilder.cs" />
+    <Compile Include="Models\F16\Upload\CMSBuilder.cs" />
+    <Compile Include="Models\F16\Upload\HARMBuilder.cs" />
+    <Compile Include="Models\F16\Upload\HTSBuilder.cs" />
+    <Compile Include="Models\F16\Upload\MFDBuilder.cs" />
+    <Compile Include="Models\F16\Upload\MiscBuilder.cs" />
+    <Compile Include="Models\F16\Upload\RadioBuilder.cs" />
+    <Compile Include="Models\F16\Upload\WaypointBuilder.cs" />
+    <Compile Include="Models\Presets\AircraftBase.cs" />
+    <Compile Include="Models\Presets\AircraftModel.cs" />
+    <Compile Include="Models\Presets\PresetChangedCallback.cs" />
+    <Compile Include="Models\Presets\PresetsStore.cs" />
+    <Compile Include="Models\Base\IConfiguration.cs" />
+    <Compile Include="Models\Base\Settings.cs" />
+    <Compile Include="Models\Base\StringCompressor.cs" />
+    <Compile Include="Models\F16\F16Configuration.cs" />
+    <Compile Include="Models\DCS\Airbase.cs" />
+    <Compile Include="Models\DCS\Command.cs" />
+    <Compile Include="Models\DCS\Device.cs" />
+    <Compile Include="Models\DCS\Theaters.cs" />
+    <Compile Include="Models\F16\CMS\Program.cs" />
+    <Compile Include="Models\F16\MFD\MFDConfiguration.cs" />
+    <Compile Include="Models\F16\MFD\Mode.cs" />
+    <Compile Include="Models\F16\MFD\ModeConfiguration.cs" />
+    <Compile Include="Models\F16\MFD\Page.cs" />
+    <Compile Include="Models\F16\Radios\RadioSystem.cs" />
+    <Compile Include="Models\Base\FileStorage.cs" />
+    <Compile Include="Models\Presets\Aircraft.cs" />
+    <Compile Include="Models\Presets\Preset.cs" />
+    <Compile Include="Models\WaypointDB\WaypointDB.cs" />
+    <Compile Include="UI\Aircrafts\JF17\CMSPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\CMSPage.Designer.cs">
+      <DependentUpon>CMSPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\HARMPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\HARMPage.Designer.cs">
+      <DependentUpon>HARMPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\HTSPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\HTSPage.Designer.cs">
+      <DependentUpon>HTSPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\LoadSavePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\LoadSavePage.Designer.cs">
+      <DependentUpon>LoadSavePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\MFDPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\MFDPage.Designer.cs">
+      <DependentUpon>MFDPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\MiscPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\MiscPage.Designer.cs">
+      <DependentUpon>MiscPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\RadioPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\RadioPage.Designer.cs">
+      <DependentUpon>RadioPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\UploadToJetPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\UploadToJetPage.Designer.cs">
+      <DependentUpon>UploadToJetPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\WaypointEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\WaypointEdit.Designer.cs">
+      <DependentUpon>WaypointEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\WaypointsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\JF17\WaypointsPage.Designer.cs">
+      <DependentUpon>WaypointsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\HARMPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\HARMPage.Designer.cs">
+      <DependentUpon>HARMPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\HTSPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\HTSPage.Designer.cs">
+      <DependentUpon>HTSPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\MiscPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\MiscPage.Designer.cs">
+      <DependentUpon>MiscPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Base\Controls\DTCCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Base\Controls\DTCCheckBox.Designer.cs">
+      <DependentUpon>DTCCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Base\SortableBindingList.cs" />
+    <Compile Include="UI\Base\Controls\DTCBreadCrumb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Base\Controls\DTCBreadCrumb.Designer.cs">
+      <DependentUpon>DTCBreadCrumb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Base\Controls\DTCButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Base\Controls\DTCDataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Base\Controls\DTCDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Base\Controls\DTCGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Base\Controls\DTCLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Base\Controls\DTCStackPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Base\Controls\DTCTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Base\Controls\GraphicsExtensions.cs" />
+    <Compile Include="UI\Base\Draggable.cs" />
+    <Compile Include="UI\Base\EmitterList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Base\EmitterList.Designer.cs">
+      <DependentUpon>EmitterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Base\WaypointCaptureCrosshair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Base\WaypointCaptureCrosshair.Designer.cs">
+      <DependentUpon>WaypointCaptureCrosshair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Base\WaypointCapture.cs" />
+    <Compile Include="Models\F16\Radios\RadioChannel.cs" />
+    <Compile Include="Models\F16\Radios\RadioType.cs" />
+    <Compile Include="Models\Base\UDPSocket.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\CMSPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\CMSPage.Designer.cs">
+      <DependentUpon>CMSPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CommonPages\AircraftSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\LoadSavePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\LoadSavePage.Designer.cs">
+      <DependentUpon>LoadSavePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\MFDPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\MFDPage.Designer.cs">
+      <DependentUpon>MFDPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\RadioPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\RadioPage.Designer.cs">
+      <DependentUpon>RadioPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\UploadToJetPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\UploadToJetPage.Designer.cs">
+      <DependentUpon>UploadToJetPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\WaypointEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\WaypointEdit.Designer.cs">
+      <DependentUpon>WaypointEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\WaypointsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Aircrafts\F16\WaypointsPage.Designer.cs">
+      <DependentUpon>WaypointsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CommonPages\MainPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CommonPages\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CommonPages\Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CommonPages\PresetName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CommonPages\PresetName.Designer.cs">
+      <DependentUpon>PresetName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\F16\CMS\CMSystem.cs" />
+    <Compile Include="Models\F16\F16Commands.cs" />
+    <Compile Include="Models\F16\F16Upload.cs" />
+    <Compile Include="Models\F16\MFD\MFDSystem.cs" />
+    <Compile Include="Models\F16\Radios\Radio.cs" />
+    <Compile Include="Models\F16\Waypoints\Waypoint.cs" />
+    <Compile Include="Models\F16\Waypoints\WaypointSystem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Base\Util.cs" />
+    <Compile Include="UI\CommonPages\WaypointDatabase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CommonPages\WaypointDatabase.Designer.cs">
+      <DependentUpon>WaypointDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CommonPages\AircraftPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CommonPages\AircraftPage.Designer.cs">
+      <DependentUpon>AircraftPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CommonPages\PresetsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CommonPages\PresetsPage.Designer.cs">
+      <DependentUpon>PresetsPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Aircrafts\JF17\CMSPage.resx">
+      <DependentUpon>CMSPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\JF17\HARMPage.resx">
+      <DependentUpon>HARMPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\JF17\HTSPage.resx">
+      <DependentUpon>HTSPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\JF17\LoadSavePage.resx">
+      <DependentUpon>LoadSavePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\JF17\MFDPage.resx">
+      <DependentUpon>MFDPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\JF17\RadioPage.resx">
+      <DependentUpon>RadioPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\JF17\UploadToJetPage.resx">
+      <DependentUpon>UploadToJetPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\JF17\WaypointEdit.resx">
+      <DependentUpon>WaypointEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\JF17\WaypointsPage.resx">
+      <DependentUpon>WaypointsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\F16\HARMPage.resx">
+      <DependentUpon>HARMPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\F16\HTSPage.resx">
+      <DependentUpon>HTSPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Base\Controls\DTCBreadCrumb.resx">
+      <DependentUpon>DTCBreadCrumb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Base\Controls\DTCTextBox.resx">
+      <DependentUpon>DTCTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Base\EmitterList.resx">
+      <DependentUpon>EmitterList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Base\WaypointCaptureCrosshair.resx">
+      <DependentUpon>WaypointCaptureCrosshair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\F16\CMSPage.resx">
+      <DependentUpon>CMSPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\F16\LoadSavePage.resx">
+      <DependentUpon>LoadSavePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\F16\MFDPage.resx">
+      <DependentUpon>MFDPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\F16\RadioPage.resx">
+      <DependentUpon>RadioPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\F16\UploadToJetPage.resx">
+      <DependentUpon>UploadToJetPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\F16\WaypointEdit.resx">
+      <DependentUpon>WaypointEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Aircrafts\F16\WaypointsPage.resx">
+      <DependentUpon>WaypointsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CommonPages\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CommonPages\PresetName.resx">
+      <DependentUpon>PresetName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CommonPages\WaypointDatabase.resx">
+      <DependentUpon>WaypointDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CommonPages\AircraftPage.resx">
+      <DependentUpon>AircraftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CommonPages\PresetsPage.resx">
+      <DependentUpon>PresetsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DCSDTC.lua">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="dtc-airbases.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="dtc-emitters.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="dtc-settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="dtc.key.snk" />
+    <None Include="DTC_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\target_121330.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F16.png" />
+    <Content Include="Resources\Iconleak-Atrous-Disk.ico" />
+    <None Include="Resources\Waypoints.png" />
+    <Content Include="Structure.txt" />
+    <None Include="Resources\2560px-Brown-dominant__highland__ERDL_camouflage_pattern_swatch.svg.png" />
+    <None Include="Resources\tablet.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
