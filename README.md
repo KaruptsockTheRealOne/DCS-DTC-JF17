@@ -36,10 +36,6 @@ This application is written using .NET Framework 4.7.2. You may want to download
 local DCSDTClfs=require('lfs'); dofile(DCSDTClfs.writedir()..'Scripts/DCSDTC.lua')
 ```
 
-## Help
-
-Contact me on Discord (The_Paid_Actor#1368) if you have issues, questions or suggestions.
-
 ## Credits
 
 This uses some code and inspiration from DCS The Way mod by Comrade Doge. Link to the repository:
