@@ -1,6 +1,6 @@
 # DCS DTC
 
-You will need to compile it in Visual Studio 2022 Community.
+You will need to compile it in Visual Studio 2022 Community, otherwise if I included the .exe files your system would whinge about a virus as its not a sign .exe.
 
 This is an extension of the work of the DCS DTC MOD for the DTC (Data Cartridge) in the F-16.
 https://github.com/the-paid-actor/dcs-dtc
